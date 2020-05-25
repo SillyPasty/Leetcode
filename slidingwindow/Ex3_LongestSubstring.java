@@ -4,13 +4,13 @@ import java.util.HashMap;
 
 public class Ex3_LongestSubstring {
     public static void main(String args[]) {
-        Solution sol = new Solution();
+        Ex3Solution sol = new Ex3Solution();
         String s = new String("a");
         System.out.println(sol.lengthOfLongestSubstring(s));
     }
 }
 
-class Solution {
+class Ex3Solution {
     public int lengthOfLongestSubstring(String s) {
         int result = 0, lc = 0;
         HashMap<Character,Integer> hash = new HashMap<>();
