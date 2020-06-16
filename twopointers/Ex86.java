@@ -1,7 +1,7 @@
 public class Ex86 {
     
 }
-
+// EZ
 class Ex86Solution {
     public ListNode partition(ListNode head, int x) {
         ListNode lp = head;
