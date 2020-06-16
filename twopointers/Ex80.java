@@ -9,7 +9,7 @@ public class Ex80 {
             System.out.println(x);
     }
 }
-
+// easy
 class Ex80Solution {
     public int removeDuplicates(int[] nums) {
         if (nums.length == 0)

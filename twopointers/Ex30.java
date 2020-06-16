@@ -19,6 +19,7 @@ public class Ex30 {
 
 class Ex30Solution {
     public List<Integer> findSubstring(String s, String[] words) {
+        // O(mn) solution
         List<Integer> result = new ArrayList<Integer>();
         Map<String, Integer> counts = new HashMap<String, Integer>();
         if (s.length() == 0 || words.length == 0)

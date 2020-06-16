@@ -10,6 +10,7 @@ public class Ex42 {
 }
 
 class Ex42Solution {
+    // one path solution
     public int trap(int[] height) {
         int result = 0;
         final int length = height.length;
