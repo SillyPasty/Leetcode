@@ -4,7 +4,11 @@
 			"path": "."
 		}
 	],
-	"settings": {},
+	"settings": {
+		"files.associations": {
+			"string": "cpp"
+		}
+	},
 	"launch": {
 		"version": "0.2.0",
 		"configurations": [
