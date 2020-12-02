@@ -48,7 +48,7 @@ vector<int> merge(vector<int>& s1, vector<int>& s2) {
 
 int cmp(vector<int>& ss1, int idx1, vector<int>& ss2, int idx2) {
     while (idx1 < ss1.size() && idx2 < ss2.size()) {
-        if (!(ss1[idx1] - ss2[idx2]))
+        if (ss1[idx1] - ss2[idx2])
             return ss1[idx1] - ss2[idx2];
         idx1++;
         idx2++;
