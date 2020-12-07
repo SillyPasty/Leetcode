@@ -78,7 +78,7 @@
 			"typeinfo": "cpp",
 			"valarray": "cpp"
 		},
-		"C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, UseTab: Never, IndentWidth: 4, TabWidth: 4, ColumnLimit: 90, AccessModifierOffset: -4, AllowShortIfStatementsOnASingleLine: false, AllowShortLoopsOnASingleLine: false, AllowShortFunctionsOnASingleLine: Empty}",
+		"C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, UseTab: Never, IndentWidth: 4, TabWidth: 4, ColumnLimit: 90, AccessModifierOffset: -4, AllowShortIfStatementsOnASingleLine: true, AllowShortLoopsOnASingleLine: true, AllowShortFunctionsOnASingleLine: Empty}",
 		"indentRainbow.ignoreErrorLanguages": [
 			"markdown",
 			"cpp",

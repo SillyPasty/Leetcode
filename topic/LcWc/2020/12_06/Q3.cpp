@@ -18,8 +18,6 @@ int concatenatedBinary(int n) {
             res += ((tmp & mask) / mask);
             mask >>= 1;
         }
-        cout << res << endl;
-        // --n;
     }
     return res;
 }
