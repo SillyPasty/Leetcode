@@ -3,28 +3,29 @@ using namespace std;
 class Solution {
 public:
     int waysToSplit(vector<int>& nums) {
-        vector<long long> diff(nums.size());
-        diff[0] = nums[0];
-        for (int i = 1; i < nums.size(); ++i) {
-            diff[i] = diff[i - 1] + nums[i];
-        }
-        int result = 0;
-        for (int i = 0; i < nums.size() - 2; ++i) {
-            int left_sum = diff[i];
-            int mid_sum, right_sum;
-            for (int j = i + 1; j < nums.size() - 1; ++j) {
-                mid_sum = diff[j] - diff[i];
-                right_sum = diff[nums.size() - 1] - diff[j];
-                if (mid_sum > right_sum)
-                    break;
-                if (left_sum > mid_sum)
-                    continue;
-                ++result;
-                result %= static_cast<int>(1e9) + 7;
-            }
-            if (left_sum > mid_sum)
+        int n = nums.size();
+        vector<int> s(n + 1);
+        for (int i = 1; i <= n; ++i)
+            s[i] = s[i - 1] + nums[i - 1];
+        long long ans = 0;
+        int m = 2;
+        for (int l = 1; l <= n - 2; ++l) {
+            int L = s[l];
+            m = max(m, l + 1);
+            while (m < n && s[m] - L < L)
+                m++;
+            if (m == n)
                 break;
-        }   
-        return result;
+            int lo = m, hi = n - 1;
+            while (lo <= hi) {
+                int mid = (lo + hi) >> 1;
+                if (s[n] - s[mid] < s[mid] - L)
+                    hi = mid - 1;
+                else
+                    lo = mid + 1;
+            }
+            ans += hi - m + 1;
+        }
+        return ans % static_cast<int>(1e9 + 7);
     }
 };
