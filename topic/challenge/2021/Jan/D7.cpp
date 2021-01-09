@@ -1,3 +1,6 @@
+#include <vector>
+using namespace std;
+
 class Solution {
 public:
     void dfs(vector<vector<int>>& isConnected, vector<int>& visited, int provinces,
