@@ -1,0 +1,31 @@
+#include <iostream>
+#include <vector>
+
+#include "test.cpp"
+using namespace std;
+
+void count_sort(vector<int> &array) {
+    int max_num = array[0];
+    for (auto i : array) max_num = max(i, max_num);
+    vector<int> count(max_num + 1);
+    for (auto i : array) ++count[i];
+    int index = 0;
+    for (auto i = 0; i <= max_num; ++i)
+        while (count[i]--) array[index++] = i;
+}
+
+int main() {
+    for (int i = 0; i < 100; ++i) {
+        vector<int> vec = get_vector();
+        vector<int> my_vec(vec);
+        count_sort(my_vec);
+        if (!check(vec, my_vec)) {
+            cout << "failed!" << endl;
+            for (auto i : vec) cout << i << ", ";
+            cout << endl;
+            return 0;
+        }
+    }
+    cout << "success" << endl;
+    return 0;
+}
