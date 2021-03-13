@@ -6,7 +6,7 @@ using namespace std;
 
 vector<int> get_vector() {
     srand(time(NULL));
-    int length = 100;
+    int length = 10000;
     vector<int> vec(length);
     for (auto i = 0; i < length; ++i) vec[i] = rand();
     return vec;
